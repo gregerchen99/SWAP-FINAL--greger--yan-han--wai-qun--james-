@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+	
+	<form action="customer_register.php" method="post">
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+		<label for="Username">Your username</label>
+		<br>
+		<input type="Username" name="Username" id="Username" placeholder="Username" required>
+		<br>
+
+		<label for="Password">Create a password(8 Characters long, 1 uppercase, 1 lowercase, 1 numberic character)</label>
+		<br>
+		<input type="password" name="Password" id="Password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters">
+		<br>
+
+		<label for="Email">Your email address</label>
+		<br>
+		<input type="email" name="Email" id="Email" placeholder="example@domain.com" required>
+		<br>
+
+		<label for="Contact">Mobile Phone(format: xxxx-xxxx)</label>
+		<br>
+		<input type="tel" min="0" name="Contact" id="Contact" placeholder="xxxx-xxxx" pattern="[89]\d{3}-\d{4}$" required title="Number must start with 8 or 9">
+		<br>
+
+		<label for="Address">Address Eg.(Tampines Street X Blk XXX)</label>
+		<br>
+		<input type="Address" name="Address" id="Address" placeholder="Address" required>
+		<br>
+
+		<label for="Postalcode">Postal code (s)</label>
+		<br>
+		<input type="tel" name="Postalcode" id="Postalcode" placeholder="Postalcode" pattern="^\d{6}" required>
+		<br>
+		<br>
+		
+		<div class="g-recaptcha" data-sitekey="6LeoTEAUAAAAAB0zFYqh4-JRFximwWAKo-D6stv4"></div>
+		<br>
+		<input type="Submit" value="Submit">
+	</form>
+
+	<form action="http://localhost/CRUD/login_customer.php" method="post">
+		<br>
+		<input type="Submit" value="Return to login">
+	</form>
+
+</body>
+</html>

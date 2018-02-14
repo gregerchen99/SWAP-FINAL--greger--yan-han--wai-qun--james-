@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<form action="staff_update.php" method="post">
+ 
+    <label for="Password">New password(8 characters long, 1 uppercase, 1 lowercase, 1 numberic character)</label>
+    <br>
+    <input type="password" name="Password" id="Password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numberic letter">
+    <br>
+
+    <label for="Contact">New Mobile Phone(format: xxxx-xxxx)</label>
+    <br>
+    <input type="tel" min="0" name="Contact" id="Contact" placeholder="xxxx-xxxx" pattern="[89]\d{3}-\d{4}$" required title="Number must start with 8 or 9">
+    <br>
+        
+    <label for="Address">New Address:</label>
+    <br>
+    <input type="Address" name="Address" id="Address" placeholder="Address" required>
+    <br>
+    
+    <label for="Postalcode">New Postal Code (s):</label>
+    <br>
+    <input type="number" name="Postalcode" id="Postalcode" placeholder="Postalcode" pattern="^\d{6}" required>
+    <br>
+        
+	<a href="http://localhost/CRUD/staff/staff_main.php"><input type="button"  value="Back"/>
+    <input type="submit" value="Update">
+	
+</form>
+</body>
+</html>

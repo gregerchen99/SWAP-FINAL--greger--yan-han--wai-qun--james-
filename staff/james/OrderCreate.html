@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<form action="OrderCreate.php" method="post">
+
+    <label for="CustomerID">Enter CustomerID:</label>
+    <br>
+    <input type="number" required name="CustomerID" id="CustomerID" min="1" required>
+    <br>
+
+    <label for="Product">Enter BookID:</label>
+    <br>
+    <input type="Varchar" required name="Product" id="Product" min="1" required>
+    <br>
+
+    <label for="OrderDate">Date:(dd/mm/yyyy)</label>
+    <br>
+    <input type="date" required name="OrderDate" id="OrderDate" required>
+    <br>
+	
+    <label for="TotalPrice">Total Price:($)</label>
+    <br>
+    <input type="number" required name="TotalPrice" id="TotalPrice" required min="0" step="any">
+    <br>
+    
+    <label for="OrderStatus">Order Status:</label>
+    <br>
+    <input type="checkbox" required name="OrderStatus" value="Pending"> Tick if Order is Pending<br>
+    <br>
+    <br>
+
+    <a href="http://localhost/CRUD/staff/staff_main.php"><input type="button" value="Back">
+    <input type="submit" value="Create">
+</form>
+</body>
+</html>

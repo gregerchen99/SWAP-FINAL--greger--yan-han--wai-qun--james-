@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form action="http://localhost/CRUD/hr%20department/staff_create.php" method="post">
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+		<label for="Username">Username</label>
+		<br>
+		<input type="Username" name="Username" id="Username" placeholder="Username" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" title="Username must begin with a character">
+		<br>
+
+		<label for="Password">Create a password(8 characters long, 1 uppercase, 1 lowercase, 1 numberic character)</label>
+		<br>
+		<input type="password" name="Password" id="Password" placeholder="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numberic letter">
+		<br>
+
+		<label for="Email">Email address</label>
+		<br>
+		<input type="email" name="Email" id="Email" placeholder="example@domain.com" required>
+		<br>
+
+		<label for="Contact">Mobile Phone(format: xxxx-xxxx)</label>
+		<br>
+		<input type="tel" min="0" name="Contact" id="Contact" placeholder="xxxx-xxxx" pattern="[89]\d{3}-\d{4}$" required title="Number must start with 8 or 9">
+		<br>
+
+		<label for="Address">Address</label>
+		<br>
+		<input type="Address" name="Address" id="Address" placeholder="Address" required>
+		<br>
+
+		<label for="Postalcode">Postal code (s)</label>
+		<br>
+		<input type="tel" name="Postalcode" id="Postalcode" placeholder="Postalcode" pattern="^\d{6}" required>
+		<br>
+
+		<label for="Date">Joined Date(mm/dd/yyyy)</label> 
+		<br>
+		<input type="date" name="Date" id="Date" placeholder="Date" required>
+		<br>
+
+		<label for="Salary">Salary($)</label>
+		<br>
+		<input type="number" name="Salary" id="Salary" placeholder="Salary" min=0 step="any" required>
+		<br>
+
+		<label for="Position">Position</label>
+		<br>
+		<input type="Position" name="Position" id="Position" placeholder="Position" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" title="Position must begin with a character">
+		<br>
+		<br>
+
+		<div class="g-recaptcha" data-sitekey="6LeoTEAUAAAAAB0zFYqh4-JRFximwWAKo-D6stv4"></div>
+		<br>
+		<a href="http://localhost/CRUD/hr%20department/admin_main.php"><input type="button"  value="Back"/>
+		<input type="Submit" value="Submit">
+	</form>
+</body>
+</html>

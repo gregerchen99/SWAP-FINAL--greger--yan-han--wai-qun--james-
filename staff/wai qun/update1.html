@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<form action="Update_data.php" method="post">
+ 
+    <label for="bookinput">Enter Book ID of book to update:</label>
+    <br>
+    <input type="number" name="bookinput" id="bookinput" min="1" required>
+    <br>
+        
+    <label for="Book_name">Enter New Name:</label>
+    <br>
+    <input type="text" name="Book_name" id="Book_name" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" title="Book name must begin with a character">
+    <br>
+    
+    <label for="Book_author">Enter New Author:</label>
+    <br>
+    <input type="double" name="Book_author" id="Book_author" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" title="Author name must begin with a character">
+    <br>
+    
+    <label for="Book_price">Enter New Price:($)</label>
+    <br>
+    <input type="number" name="Book_price" id="Book_price" type="number" min="0" step="any" required>
+    <br>
+    
+    <label for="Book_genre">Enter New Genre:</label>
+    <br>
+    <input type="text" name="Book_genre" id="Book_genre" required pattern="[a-zA-Z][a-zA-Z0-9\s]*" title="Genre name must begin with a character">
+    <br>
+    <br>
+    
+	<a href="http://localhost/CRUD/staff/staff_main.php"><input type="button"  value="Back"/>
+    <input type="submit" value="Update">
+	
+</form>
+</body>
+</html>
